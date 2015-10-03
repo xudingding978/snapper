@@ -1,0 +1,147 @@
+
+
+body
+{
+    padding-bottom: 20px;
+}
+
+.navbar
+{
+    margin-bottom: 20px;
+}
+
+.searchBox
+{
+    width: 85%;
+    display: inline;
+}
+
+.advance-link
+{
+    margin-left: 20px;
+}
+
+.search-panel 
+{
+    margin-bottom: 10px;
+}
+
+.flex-slider 
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.adv-panel
+{
+    height: 300px;
+}
+
+.push-links
+{
+    height: 300px;
+}
+
+.link-section
+{
+    border: 1px solid #ccc;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.quick-type
+{
+    padding:5px 15px;
+}
+
+.link-section > .row
+{
+    padding: 5px 30px;
+}
+
+.link-section > .row > .row
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.quick-link
+{
+    font-size: 12px;
+}
+
+.login-section
+{
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+.legend
+{
+    text-align: center;
+}
+
+.flexslider 
+{
+    width: 100%;
+}
+
+.login-label
+{
+    text-align: left !important;
+}
+
+.form-horizontal .form-group
+{
+    padding: 5px 10px;
+}
+
+.quick-login
+{
+    width: 40%;
+}
+
+#footer
+{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #2d2e2f;
+    clear:both;
+}
+
+.link-1,.link-2,.link-3
+{
+    text-align: center;
+    color: #CCC;
+    margin-bottom: 20px;
+}
+
+#footer a
+{
+    color: #666;
+    display: inline;
+}
+
+#footer a:hover
+{
+    background: #2d2e2f;
+    color: #CCC;
+}
+
+.item
+{
+    margin: 10px;
+}
+
+.img 
+{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.cat-img
+{
+    height: 200px;
+}
