@@ -120,26 +120,47 @@
                         </ul>                         
                     </div>                     
                 </div>
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <strong>Whoops! </strong> There were some problems with your input. <br> <br>
+                        <ul>
+
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }} </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="col-md-3">
                     <section class="login-section">
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" role="form" method="POST" action="/auth/user/login">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <legend class="legend">用户登录</legend>
                             <div class="form-group"> 
                                 <label class="col-md-4 control-label login-label" for="username">用户名</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="username" placeholder="usernam">
+                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}">
                                 </div>                                     
                             </div>                                 
                             <div class="form-group"> 
                                 <label class="col-md-4 control-label login-label" for="password">密码</label>
                                 <div class="col-md-8">
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" class="form-control" name="password">
                                 </div>                                     
                             </div>
                             <div class="form-group">
+                                <div class="col-md-4 checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember"> 记住密码
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <div class="col-md-10 col-md-offset-2">
-                                    <button type="submit" class="btn btn-sm quick-login">登录</button>
-                                    <button type="button" class="btn btn-sm quick-login">注册</button>
+                                    <button type="submit" class="btn btn-primary" style="margin-right: 15px;">
+                                        登录
+                                    </button>
+                                    <button type="button" class="btn btn-sm quick-login" onclick="window.location='{{ url("/auth/user/register") }}'">注册</button>
                                 </div>
                             </div>                                 
                         </form>
