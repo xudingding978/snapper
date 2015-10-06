@@ -101,7 +101,7 @@ body
     width: 40%;
 }
 
-#footer
+footer
 {
     position: relative;
     bottom: 0;
@@ -117,13 +117,13 @@ body
     margin-bottom: 20px;
 }
 
-#footer a
+footer a
 {
     color: #666;
     display: inline;
 }
 
-#footer a:hover
+footer a:hover
 {
     background: #2d2e2f;
     color: #CCC;

@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('css')
+
+@endsection
 
 @section('content')
 
@@ -66,5 +69,11 @@
             </div>
         </div>
     </div>
+
+@endsection
+
+
+
+@section('javascript')
 
 @endsection
