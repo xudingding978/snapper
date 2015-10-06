@@ -35,18 +35,26 @@
                     <a class="navbar-brand" href="#">Snapper</a>
                 </div>
                 <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="">登录</a>
+                        </li>
+                        <li>
+                            <a href="">注册</a>
+                        </li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active">
-                            <a href="./">??</a>
+                            <a href="./">首页</a>
                         </li>
                         <li>
-                            <a href="../navbar-static-top/">????</a>
+                            <a href="../navbar-static-top/">我的账户</a>
                         </li>
                         <li>
-                            <a href="../navbar-fixed-top/">????</a>
+                            <a href="../navbar-fixed-top/">我要出国</a>
                         </li>
                         <li>
-                            <a href="../navbar-fixed-top/">??/??</a>
+                            <a href="../navbar-fixed-top/">帮助/反馈</a>
                         </li>
                     </ul>
                 </div>
@@ -58,7 +66,7 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <input type="text" class="form-control searchBox" placeholder="Placeholder text">
-                    <a name="anchor" href="#" class="advance-link">????</a>
+                    <a name="anchor" href="#" class="advance-link">高级搜索</a>
                 </div>
             </div>
         </div>
