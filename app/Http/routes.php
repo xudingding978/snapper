@@ -51,3 +51,6 @@ Route::post('auth/client/register', 'Auth\AuthClientController@postRegister');
 Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
+
+//User main page
+Route::get('user/main','User\UserController@index');

@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{ URL::asset('bootstrap/css/bootstrap.css') }}">
        <!-- <link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
         <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="{{ URL::asset('css/navbar.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/welcome.css') }}">
        <!-- <link href="css/navbar.css" rel="stylesheet">-->
         @yield('css')
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -56,11 +56,17 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active">
-                            <a href="./">首页</a>
+                            <a href="{{ url("/home") }}">首页</a>
                         </li>
-                        <li>
-                            <a href="../navbar-static-top/">我的账户</a>
-                        </li>
+                        @if (!$loginStatus)
+                            <li>
+                                <a href="{{ url("/auth/user/login") }}">我的账户</a>
+                            </li>
+                        @else
+                            <li>
+                                <a href="{{ url("/user/main") }}">我的账户</a>
+                            </li>
+                        @endif
                         <li>
                             <a href="../navbar-fixed-top/">我要出国</a>
                         </li>
