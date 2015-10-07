@@ -32,16 +32,24 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Snapper</a>
+                    <a class="navbar-brand" href="{{ url("/")}}">Snapper</a>
                 </div>
                 <div class="navbar-collapse collapse">
+                    <?php $loginStatus = Auth::check(); ?>
                     <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="">登录</a>
-                        </li>
-                        <li>
-                            <a href="">注册</a>
-                        </li>
+                        @if (!$loginStatus)
+                            <li>
+                                <a href="{{ url("/auth/user/login") }}">登录</a>
+                            </li>
+                            <li>
+                                <a href="{{ url("/auth/user/register") }}">注册</a>
+                            </li>
+                        @else
+                            <li>
+                                <?php $userName = Auth::getUser()['name']; ?>
+                                <a href="{{ url("/auth/user/register") }}">你好，{{$userName}}</a>
+                            </li>
+                        @endif
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active">
