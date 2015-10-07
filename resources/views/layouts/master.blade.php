@@ -49,6 +49,9 @@
                                 <?php $userName = Auth::getUser()['name']; ?>
                                 <a href="{{ url("/auth/user/register") }}">你好，{{$userName}}</a>
                             </li>
+                            <li>
+                                <a href="{{ url("/auth/user/logout") }}">登出</a>
+                            </li>
                         @endif
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
